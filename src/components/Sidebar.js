@@ -85,8 +85,10 @@ function Sidebar() {
       <SidebarOption Icon={ExpandLessIcon} title="showless" /> */}
       
       {/* <SidebarOption Icon={ExpandMoreIcon} title="channels" /> */}
+      <hr></hr>
       
       <SidebarOption Icon={AddIcon} addChannelOption title="Add channel" />
+      <hr></hr>
     
       {/* Connnect to database and list all the channels */}
       {/* <SidebarOption ... /> */}

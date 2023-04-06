@@ -210,7 +210,7 @@ function Post({id, username, userImg, img, caption}) {
     snapshot => setLikes(snapshot.docs)), [db, id])
 
   return (
-    <div className='bg-white my-7 border rounded-sm'>
+    <div className='bg-white my-7 border rounded-sm ml-60'>
         {/* <h1>I'm a post</h1> */}
         {/* Header */}
         <div className='flex items-center p-5'>

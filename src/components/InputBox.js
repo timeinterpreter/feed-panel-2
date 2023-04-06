@@ -226,7 +226,7 @@ function InputBox() {
 
   return (
     
-    <div className="bg-white p-2 rounded-2xl shadow-md text-gray-500 font-medium mt-6 mx-4">
+    <div className="bg-white p-2 rounded-2xl shadow-md text-gray-500 font-medium ml-60 mt-6 mx-4">
       <div className="flex space-x-4 p-4 items-center">
         <img
           className="rounded-full h-12"
