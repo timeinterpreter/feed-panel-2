@@ -1,31 +1,38 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { useNavigate } from 'react-router';
 import './SidebarOption.css';
-import db from "../firebase";
+import AddChannel from './AddChannel';
 
 function SidebarOption({Icon , title, id, addChannelOption}) {
+  const [open, setOpen] = useState(false);
   const navigate = useNavigate();
 
-  const selectChannel = () => {
-    if(id) {
-      navigate(`/room/${id}`);
-    } else {
-      navigate(title);
+  const handleClickOpen = () => {
+    if(!open){
+      setOpen(true);
     }
+  }
+
+  const handleClose = () => {
+    setOpen(false);
+  }
+
+  const selectChannel = () => {
+    if (id) {
+      navigate(`/room/${id}`);
+     } //else {
+    //   navigate(title);
+    // }
   };
 
   const addChannel = () => {
-    const channelName = prompt('Please enter the channel name: ');
-
-    if (channelName) {
-      db.collection('rooms').add({
-        name : channelName
-      })
-    }
+     handleClickOpen();
   };
+
 
   return (
     <div className='sidebarOption' onClick={addChannelOption ? addChannel : selectChannel}>
+      <AddChannel handleClose={handleClose} open={open}/>
         {Icon && <Icon className="sidebarOption__icon"/> }
         {Icon ?(
             <h3>{title}</h3>
