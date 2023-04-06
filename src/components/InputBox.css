@@ -1,0 +1,10 @@
+.Input_Box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Input_Box:hover {
+    cursor: pointer;
+    background-color: gray;
+}
