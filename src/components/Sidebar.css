@@ -5,7 +5,13 @@
     border-top: 1px solid #49274b;
     max-width: 260px;
     min-width: 260px;
-    max-height: 1000px;
+    max-height: 10000px;
+    position: fixed;
+    width: 100%;
+  z-index: 999;
+  bottom: 0;
+  top: calc(60px + 0px);
+   
     
 }
 
@@ -54,3 +60,4 @@
     border-radius: 999px;
 
 }
+

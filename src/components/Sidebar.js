@@ -64,7 +64,7 @@ function Sidebar() {
   };
 
   return (
-    <div className="sidebar">
+    <div className="sidebar" >
       <div className="sidebar_header">
         <div className="sidebar__info">
           <h2>CAMPUS CONNECT</h2>

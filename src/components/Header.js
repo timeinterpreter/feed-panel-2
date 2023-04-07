@@ -10,7 +10,7 @@ function Header() {
 
   const[{user}] = useStateValue();
   return (
-    <div className="header">
+    <div className="header" >
         <div className="header__left">
             <Avatar className="header_avatar" alt={user?.displayName} src={user?.photoURL} />
             <AccessTimeIcon/>
