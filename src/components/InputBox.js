@@ -244,7 +244,7 @@ function InputBox() {
               type='submit' 
               disabled={!message.trim()} 
               onClick = {uploadPost}
-              className='font-semibold text-green-600 pl-2'
+              className='font-semibold text-green-600 pl-2 cursor-pointer'
             >
             Submit
           </button>
@@ -271,8 +271,8 @@ function InputBox() {
           onClick={() => filepickerRef.current.click()}
           className="inputIcon"
         >
-          <ImageIcon className="h-7 text-green-400" />
-          <p className="text-xs sm:text-sm xl:text-base">Select Image</p>
+          <ImageIcon className="h-7 text-green-400 btn" />
+          <p className="text-xs sm:text-sm xl:text-base"></p>
           <input
             onChange={addImageToPost}
             ref={filepickerRef}

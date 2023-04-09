@@ -154,6 +154,8 @@ import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
+import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import { addDoc, collection, deleteDoc, doc, onSnapshot, orderBy, query, serverTimestamp, setDoc } from 'firebase/firestore';
 import db from '../firebase';
 import { useStateValue } from '../StateProvider';
@@ -229,9 +231,9 @@ function Post({id, username, userImg, img, caption}) {
             <div className='flex space-x-4'>
                 {
                     hasLiked ? (
-                        <FavoriteOutlinedIcon onClick={likePost} className='btn text-red-500' />
+                        <ThumbUpIcon onClick={likePost} className='btn text-blue-500' />
                     ) : (
-                        <FavoriteBorderOutlinedIcon onClick={likePost} className='btn'/>
+                        <ThumbUpAltOutlinedIcon onClick={likePost} className='btn'/>
                     )
                 }
                 
@@ -270,7 +272,7 @@ function Post({id, username, userImg, img, caption}) {
 
         {/* Input */}
         <form className='flex items-center p-4'>
-            <EmojiEmotionsIcon className='h-7'/>
+            <EmojiEmotionsIcon className='h-7  text-blue-600'/>
             <input 
                 type='text'
                 value={comment}
@@ -282,7 +284,7 @@ function Post({id, username, userImg, img, caption}) {
                 type='submit' 
                 disabled={!comment.trim()} 
                 onClick = {sendComment}
-                className='font-semibold text-blue-400'
+                className='font-semibold text-blue-400 cursor-pointer'
             >   Post
                 </button>
         </form>
