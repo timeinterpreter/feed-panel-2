@@ -1,8 +1,9 @@
 .chat {
     flex: 0.7;
     flex-grow: 1;
-    /* overflow-y: scroll; */
+    overflow-y: scroll;
     padding-bottom: 150x;
+    
 }
 
 .sidebarright {
@@ -12,7 +13,8 @@
   width: 180px;
   height: 100%;
   background-color:  #49274b;
-  transition: all 0.3s ease-in-out; /* Add a smooth transition effect */
+  transition: all 0.3s ease-in-out;
+   /* Add a smooth transition effect */
 }
 
 .sidebarright.active {
@@ -38,17 +40,36 @@
     font-size: 16px;
 }
 
-.chat_headerRight > p {
+/* .chat_headerRight > p {
     display: flex;
     align-items: center;
     font-size: 14px;
+    margin-top: 30px;
+    cursor: pointer;
 }
 
-.chat_headerRight > p > .MuiSvgIcon-root {
+.chat_headerRight > p > svg {
     margin-right: 5px !important;
     align-items: center;
     font-size: 16px;
-}
+    } */
+    .chat_headerRight {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      margin-top: 45px;
+      cursor: pointer;
+    }
+    
+    .headerRightContainer {
+      display: flex;
+      align-items: center;
+    }
+    
+    .headerRightContainer > svg {
+      margin-right: 5px;
+      font-size: 16px;
+    }
 
 .chat__messages {
     height: 530px;

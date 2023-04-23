@@ -153,12 +153,12 @@ function Chat() {
             <StarBorderOutlined />
           </h4>
         </div>
-        <div className="chat_headerRight "  onClick={handleAddUserClick}>
-        <PersonAddAltIcon/>
-          <p  className="ml-2">
-            Add New User
-          </p>
-        </div>
+        <div className="chat_headerRight" onClick={handleAddUserClick}>
+  <div className="headerRightContainer">
+    <PersonAddAltIcon/>
+    <p className="ml-2">Add New User</p>
+  </div>
+</div>
         
       </div>
       
