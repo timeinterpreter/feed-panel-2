@@ -5,4 +5,8 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  //Remove Tailwind CSS's preflight style so it can use the MUI's preflight instead
+  corePlugins: {
+    preflight: false,
+  },
 }

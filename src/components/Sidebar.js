@@ -34,8 +34,7 @@ function Sidebar() {
   
 
   useEffect(() => {
-    //Run this code once when the sidebar component loads
-    db.collection("rooms").onSnapshot((snapshot) =>
+    db.collection("rooms").where('members', 'array-contains', user.uid).onSnapshot((snapshot) =>
       setChannels(
         snapshot.docs.map((doc) => ({
           id: doc.id,
@@ -43,7 +42,7 @@ function Sidebar() {
         }))
       )
     );
-  }, []);
+  }, [user]);
 
 
   const signOut = () => {
