@@ -6,6 +6,11 @@
     
 }
 
+.chat_headerLeft{
+  margin-top: 60px;
+  margin-left: 250px;
+}
+
 .sidebarright {
   position: fixed;
   top: 190;
@@ -32,6 +37,7 @@
 .chat_channelName {
     display: flex;
     text-transform: lowercase;
+    
 }
 
 .chat_channelName > .MuiSvgIcon-root {
