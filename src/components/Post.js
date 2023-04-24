@@ -272,7 +272,7 @@ function Post({id, username, userImg, img, caption}) {
 
         {/* Input */}
         <form className='flex items-center p-4'>
-            <EmojiEmotionsIcon className='h-7  text-blue-600'/>
+            <EmojiEmotionsIcon className='h-7  text-yellow-300'/>
             <input 
                 type='text'
                 value={comment}
