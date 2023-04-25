@@ -147,23 +147,13 @@
 // Removing Tailwind
 
 import React, { useEffect, useState } from 'react'
-import BookmarkBorderOutlinedIcon from '@mui/icons-material/BookmarkBorderOutlined';
-import ChatOutlinedIcon from '@mui/icons-material/ChatOutlined';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
-import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
-import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
-import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import ThumbUpAltOutlinedIcon from '@mui/icons-material/ThumbUpAltOutlined';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import { addDoc, collection, deleteDoc, doc, onSnapshot, orderBy, query, serverTimestamp, setDoc } from 'firebase/firestore';
 import db from '../firebase';
-import { useStateValue } from '../StateProvider';
-import { async } from '@firebase/util';
-// import Moment from 'react-moment';
-// import { useSession } from "next-auth/react"
 import { getAuth } from "firebase/auth";
-// import "./Post.css"
+import "./Post.css"
 
 function Post({id, username, userImg, img, caption}) {
     const [comment, setComment] = useState("")
@@ -212,11 +202,11 @@ function Post({id, username, userImg, img, caption}) {
     snapshot => setLikes(snapshot.docs)), [db, id])
 
   return (
-    <div className='bg-white my-4 border rounded-sm ml-60'>
+    <div className='bg-white my-4 border rounded-sm ml-60 post-border'>
         {/* <h1>I'm a post</h1> */}
         {/* Header */}
         <div className='flex items-center p-5'>
-            <img  src = {userImg} 
+            <img src = {userImg} referrerPolicy="no-referrer" 
             className='rounded-full h-12 w-12 object-contain border p-1 mr-3' alt=''/>
             <p className='flex-1 font-bold'>{username}</p>
             {/* <MoreHorizIcon className='h-5'/>  */}
