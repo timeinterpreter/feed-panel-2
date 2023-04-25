@@ -20,6 +20,7 @@ const [{ user }] = useStateValue();
                 userImage: user.photoURL,
             })
         }
+        setInput('')
     }
   return (
     <div className='chatInput'>
