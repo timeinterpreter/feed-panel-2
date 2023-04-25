@@ -156,7 +156,7 @@ function Chat() {
         <div className="chat_headerRight" onClick={handleAddUserClick}>
   <div className="headerRightContainer">
     <PersonAddAltIcon/>
-    <p className="ml-2">Add New User</p>
+    <p className="ml-2">Add Team Member</p>
   </div>
 </div>
         

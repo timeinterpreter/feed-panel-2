@@ -219,7 +219,7 @@ function Post({id, username, userImg, img, caption}) {
             <img  src = {userImg} 
             className='rounded-full h-12 w-12 object-contain border p-1 mr-3' alt=''/>
             <p className='flex-1 font-bold'>{username}</p>
-            <MoreHorizIcon className='h-5'/> 
+            {/* <MoreHorizIcon className='h-5'/>  */}
         </div>
         {/* Img */}
         <img
@@ -284,7 +284,7 @@ function Post({id, username, userImg, img, caption}) {
                 type='submit' 
                 disabled={!comment.trim()} 
                 onClick = {sendComment}
-                className='font-semibold text-blue-400 cursor-pointer'
+                className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'
             >   Post
                 </button>
         </form>
